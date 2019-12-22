@@ -1,0 +1,9 @@
+def find_outlier(integers):
+    l = [c % 2 for c in integers]
+    c1 = l.count(0)
+    c2 = l.count(1)
+    if c1 == 1 and c2 > 1:
+        val = l.index(0)
+    else:
+        val = l.index(1)
+    return integers[val]

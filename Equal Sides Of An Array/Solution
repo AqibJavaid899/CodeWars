@@ -1,0 +1,10 @@
+def find_even_index(arr):
+    ans = {}
+    for i in range(len(arr)):
+        s1 = sum(arr[0:i])
+        s2 = sum(arr[i+1:len(arr)])
+        if s1 == s2:
+            ans[i] = s1
+    if len(ans) is 0:
+        return -1;
+    return (min(ans))

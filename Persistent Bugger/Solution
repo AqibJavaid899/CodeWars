@@ -1,0 +1,13 @@
+import math
+def persistence(n):
+    out,c = len(str(n)),0;        #Taking the length of the Digits in the number
+    while out > 1:                #WHILE len(DIGITS) in 'n' > 1 do below
+        inn,val = out,1;          #Assigning LEN of the digits to 'inn' Variable  
+        c += 1;
+        while inn >= 1:           #WHILE LEN(inn) >= 1 do below 
+            f = n % 10;           #Extracting the final Digit from the 'n'
+            n = math.floor(n / 10);
+            val = (val * f)       #Doing the calculation given in Question
+            inn -= 1;             #Decrementing size of inn by 1
+        n,out = val,len(str(val));#Doing it for the newly obtained number
+    return c

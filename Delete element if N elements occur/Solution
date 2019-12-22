@@ -1,0 +1,11 @@
+def delete_nth(order,max_e):
+    if len(order) == 0:
+        return []
+    k = [0 for j in range(max(order) +1 )]
+    o,count = list(order),0
+    for i in order:
+        if k[i] < max_e:
+            k[i] += 1;    count += 1;
+        else:
+            del o[count];
+    return o

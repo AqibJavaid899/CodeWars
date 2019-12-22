@@ -1,0 +1,6 @@
+def disemvowel(string):
+    k = ''
+    for c in string:
+       if c not in ['a','e','i','o','u','A','E','I','O','U']:
+           k += c
+    return k

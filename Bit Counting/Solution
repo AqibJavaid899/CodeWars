@@ -1,0 +1,7 @@
+def countBits(n):
+    k = format(n,'b')
+    count = 0;
+    for i in k:
+        if i == '1':
+            count+=1
+    return count

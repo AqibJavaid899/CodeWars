@@ -1,0 +1,4 @@
+def DNA_strand(dna):
+    dic = {'T' : 'A', 'A' : 'T', 'C' : 'G', 'G' : 'C'};
+    val = "".join([dic[c] for c in dna])
+    return val

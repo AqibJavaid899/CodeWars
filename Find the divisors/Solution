@@ -1,0 +1,9 @@
+def divisors(integer):
+    k = []
+    init = integer // 2;        #finding the middle value of the number
+    for i in range(2,init+1):
+        if (integer % i == 0):  #That condition means if number is ompletely divided by i
+            k.append(i)         #Append the List with the Divisor
+    if len(k) == 0:             #if the list is empty after loop, it means number was Prime
+        return '{0} is prime'.format(integer)
+    return k

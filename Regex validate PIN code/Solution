@@ -1,0 +1,8 @@
+import re
+def validate_pin(pin):
+    pin = pin.strip(' ')
+    if (len(pin) == 4 or len(pin) == 6):
+        val = re.compile("^([0-9])+$")
+        return bool(val.fullmatch(pin))
+    else:
+        return False
